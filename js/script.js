@@ -36,7 +36,7 @@
                 toggleTaskDone(index);
             });
         });
-    }
+    };
 
     const render = () => {
         let htmlString = "";
@@ -44,11 +44,11 @@
         for (const task of tasks) {
             htmlString += `
             <li 
-                ${task.done ? " style=\"text-decoration: line-through\"" : ""}
+                class="list__item ${task.done ? "list__item--done" : ""}"
             >
-                <button class="js-doneButton">done</button>
-                <button class="js-remove">usuń</button>
-                 ${task.content}
+                <button class="button js-doneButton">done</button>
+                ${task.content}
+                <button class="button button--remove js-remove">remove</button>
             </li>
             `;
         }
