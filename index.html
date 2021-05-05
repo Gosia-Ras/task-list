@@ -9,17 +9,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/body.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/button.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
 
-<body>
-<form class="js-form">
-    <input class="js-newTask">
-    <button>Add a task</button>
-</form>
-
-<ul class="js-tasks"></ul>
+<body class="body">
+   <div class="header">
+    <h1>To-do List</h1>
+    <div class="container">
+        <form class="form js-form">
+            <input class="form__input js-newTask" placeholder="Add a new task">
+            <button class="button button--addTask">Add a new task</button>
+        </form>
+        </div>
+   </div>
+      <div class="container">
+        <h2 class="header header--list">List</h2>
+        <ul class="list js-tasks"></ul>
+      </div>
+    </div>
 </body>
 
 </html>
