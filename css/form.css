@@ -1,12 +1,23 @@
 .form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 10px;
-    margin: 20px;
 }
 
 .form__input {
     margin: 0;
     border: none;
     border-radius: 0;
-    width: 40%;
-    padding: 20px; 
+    padding: 15px;
+    width: 100%;
+    flex-basis: 70%;
+}
+
+.form__button {
+    background-color: rgb(67, 114, 116);
+    color: cornsilk;
+    box-shadow: 5px 5px 17px -10px #000000;
+    flex-basis: 20%;
+    padding: 15px
 }
