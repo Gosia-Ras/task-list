@@ -1,7 +1,15 @@
 {
     const tasks = [
-        
+
     ];
+
+    const addNewTask = (newTask) => {
+        tasks.push({
+            content: newTask,
+
+        });
+        render();
+    };
 
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
@@ -51,23 +59,23 @@
         bindEvents();
     };
 
+    const removeInput = (newTask) => {
+        newTask.value = "";
+        newTask.focus();
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTask = document.querySelector(".js-newTask").value.trim();
+        const newTask = document.querySelector(".js-newTask");
+        const newTaskContent = newTask.value.trim();
 
-        if (newTask === "") {
+        if (!newTaskContent) {
+            removeInput(newTask);
             return;
         }
-        addNewTask(newTask);
-    };
-
-    const addNewTask = (newTask) => {
-        tasks.push({
-            content: newTask,
-
-        });
-        render();
+        removeInput(newTask);
+        addNewTask(newTaskContent);
     };
 
     const init = () => {
