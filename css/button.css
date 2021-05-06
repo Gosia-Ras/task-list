@@ -1,19 +1,14 @@
 .button {
-    background-color: rgb(132, 248, 194);
+    background-color: lightgreen;
     padding: 15px;
     margin: 15px;
-    box-shadow: 5px 5px 17px -10px #000000;
+    border: 3px outset; 
 }
 
 .button--remove {
-    background-color: rgb(240, 111, 122);
-    
+    background-color: lightcoral;
 }
 
 .button:hover {
-    background-color: palegoldenrod;
-}
-
-.button--addTask {
-    margin: 0 auto;
+    background-color: darkcyan;
 }
