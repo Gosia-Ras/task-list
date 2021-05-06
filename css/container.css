@@ -1,4 +1,7 @@
 .container {
     margin: 0 auto;
-    padding: 50px;
+    max-width: 1024px;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 10px;
 }
