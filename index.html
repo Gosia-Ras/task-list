@@ -19,23 +19,26 @@
     <link href="css/button.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
 
 <body class="body">
-   <div class="header">
-    <h1>To-do List</h1>
     <div class="container">
-        <form class="form js-form">
-            <input class="form__input js-newTask" placeholder="Add a new task">
-            <button class="button button--addTask">Add a new task</button>
-        </form>
-        </div>
-   </div>
-      <div class="container">
-        <h2 class="header header--list">List</h2>
-        <ul class="list js-tasks"></ul>
-      </div>
+        <header class="header">
+            <h1>To-do List</h1>
+        </header>
+        <section class="section">
+            <h2 class="section__header">Add new task to the list</h2>
+            <form class="form js-form">
+                <input class="form__input js-newTask" placeholder="Add a new task">
+                <button class="form__button">Add a new task</button>
+            </form>
+        </section>
+        <section class="section">
+            <h2 class="section__header">List</h2>
+            <ul class="list js-tasks"></ul>
+        </section>
     </div>
 </body>
 
