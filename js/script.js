@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "do homework",
-            done: false,
-        },
-        {
-            content: "tidy the flat",
-            done: true,
-        },
+        
     ];
 
     const removeTask = (taskIndex) => {
