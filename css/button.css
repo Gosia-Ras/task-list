@@ -1,6 +1,6 @@
 .button {
     background-color: rgb(113, 243, 113);
-    padding: 25px;
+    padding: 20px;
     border: 3px outset;
     display: flex;
     align-items: center;
