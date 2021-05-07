@@ -24,13 +24,14 @@
 }
 
 .list__item--done {
-    text-decoration: line-through;
-    font-style: oblique;
+    color: rgba(0, 0, 0, 0.425);  
 }
 
 .list__span {
-    padding: 25px;
     font-size: 22px;
-    display: block;
     overflow-wrap: break-word;
+}
+
+.list__span--done {
+    text-decoration: line-through;
 }
