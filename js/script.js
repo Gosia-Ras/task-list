@@ -64,7 +64,7 @@
     const removeInput = (newTask) => {
         newTask.value = "";
         newTask.focus();
-    }
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
