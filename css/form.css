@@ -2,28 +2,26 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
 }
 
 @media (max-width: 768px) {
     .form {
         flex-direction: column;
+        padding: 15px;
     }
 }
 
 .form__input {
-    margin: 0;
     border: none;
-    border-radius: 0;
     padding: 15px;
-    width: 100%;
     flex-basis: 70%;
+    width: 100%;
 }
 
-@media (max-widthL: 768px) {
+@media (max-width: 768px) {
     .form__input {
         flex-basis: 40px;
-        width: 80%;
+        width: 100%;
         margin-bottom: 15px;
     }  
 }
@@ -41,7 +39,6 @@
     .form__button {
         flex-basis: 40px;
         width: 100%;
-        margin-top: 10px;
     } 
 }
 
