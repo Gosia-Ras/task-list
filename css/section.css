@@ -5,6 +5,8 @@
 .section__header {
     padding: 0 20px;
     margin-top: 5px;
+    background-color: lightgrey;
+    padding: 5px;
 }
 
 @media (max-width: 768px) {
