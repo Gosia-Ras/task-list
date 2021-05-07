@@ -9,19 +9,17 @@
 }
 
 .list__item {
-    padding: 10px;
     display: grid;
     grid-gap: 60px;
-    grid-template-columns: 30px 70% 30px;
-    align-content: center;
+    grid-template-columns: 40px 70% 40px;
     align-items: center;
-    justify-content: center;
 }
 
 @media (max-width: 768px) {
     .list__item {
         grid-gap: 20px;
         grid-template-columns: 30px 90% 10px;
+        justify-content: center;
     }
 }
 
