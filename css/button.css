@@ -7,6 +7,12 @@
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .button {
+        padding: 15px;
+    }
+}
+
 .button--remove {
     background-color: rgb(245, 89, 89);
 }
