@@ -21,7 +21,7 @@
 
 .form__button {
     background-color: teal;
-    color: cornsilk;
+    color: #fff;
     flex-grow: 1;
     padding: 10px;
     border: none;
