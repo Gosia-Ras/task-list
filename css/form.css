@@ -27,12 +27,11 @@
 }
 
 .form__button {
-    background-color: rgb(76, 128, 129);
+    background-color: teal;
     color: cornsilk;
-    box-shadow: 5px 5px 17px -10px #000000;
     flex-basis: 20%;
-    padding: 15px;
-    border: 3px outset;
+    padding: 10px;
+    border: none;
 }
 
 @media (max-width: 768px) {

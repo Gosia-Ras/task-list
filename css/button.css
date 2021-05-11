@@ -1,20 +1,15 @@
 .button {
-    background-color: rgb(113, 243, 113);
-    padding: 10px;
-    border: 3px outset;
+    background-color: rgb(5, 112, 5);
+    color: white;
+    padding: 5px;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-@media (max-width: 768px) {
-    .button {
-        padding: 15px;
-    }
-}
-
 .button--remove {
-    background-color: rgb(245, 89, 89);
+    background-color: rgb(209, 39, 39);
 }
 
 .button:hover {
