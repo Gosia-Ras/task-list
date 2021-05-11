@@ -22,7 +22,7 @@
 
 .list__span {
     font-size: 12px;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     padding: 10px;
 }
 
