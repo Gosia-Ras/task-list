@@ -8,6 +8,7 @@
     list-style: none;
     background-color: #fff;
     padding: 40px 20px 10px 10px;
+    margin: 0;
 }
 
 .list__item {
