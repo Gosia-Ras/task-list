@@ -60,7 +60,7 @@
         bindEvents();
     };
 
-    const removeInput = (newTask) => {
+    const resetInput = (newTask) => {
         newTask.value = "";
         newTask.focus();
     };
@@ -72,10 +72,10 @@
         const newTaskContent = newTask.value.trim();
 
         if (!newTaskContent) {
-            removeInput(newTask);
+            resetInput(newTask);
             return;
         }
-        removeInput(newTask);
+        resetInput(newTask);
         addNewTask(newTaskContent);
     };
 
