@@ -11,7 +11,3 @@
 .button--remove {
     background-color: rgb(209, 39, 39);
 }
-
-.button:hover {
-    background-color: rgb(86, 105, 117);
-}
