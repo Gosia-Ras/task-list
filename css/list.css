@@ -13,7 +13,7 @@
 
 .list__item {
     display: grid;
-    grid-template-columns: 30px 1fr 33px;
+    grid-template-columns: 33px 1fr 33px;
     align-items: center;
     border-bottom: 1px solid #eee;
     margin-bottom: 10px;
