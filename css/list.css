@@ -6,12 +6,7 @@
 
 .list {
     list-style: none;
-}
-
-@media (max-width: 768px) {
-    .list {
-        max-width: 80%;
-    }
+    background-color: #fff;
 }
 
 .list__item {
