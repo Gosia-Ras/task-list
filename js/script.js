@@ -52,7 +52,6 @@
                          ${task.content}</span>
                     <button class="button button--remove js-remove">🗑️</button>    
                 </li>
-            </div>
             `;
         }
 
