@@ -3,10 +3,9 @@
 }
 
 .section__header {
-    padding: 0 20px;
-    margin-top: 5px;
-    padding: 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+    padding: 20px 10px;
+    margin-bottom: 2px;
+    background-color: #fff;
 }
 
 @media (max-width: 768px) {
