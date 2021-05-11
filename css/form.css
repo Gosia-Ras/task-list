@@ -4,7 +4,6 @@
     margin-bottom: 3px;
 }
 
-
 .form__container {
     background-color: #fff;
     display: flex;
@@ -13,8 +12,8 @@
 }
 
 .form__input {
-    border: none;
-    padding: 15px;
+    border: 1px solid #0000002d;
+    padding: 5px;
     flex-basis: 70%;
     width: 100%;
 }
