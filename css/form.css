@@ -1,14 +1,15 @@
-.form {
+.form__header {
+    background-color: #fff;
+    padding: 20px 10px;
+    margin-bottom: 3px;
+}
+
+
+.form__container {
+    background-color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-@media (max-width: 768px) {
-    .form {
-        flex-direction: column;
-        padding: 15px;
-    }
 }
 
 .form__input {
@@ -23,7 +24,7 @@
         flex-basis: 40px;
         width: 100%;
         margin-bottom: 15px;
-    }  
+    }
 }
 
 .form__button {
@@ -39,7 +40,7 @@
     .form__button {
         flex-basis: 40px;
         width: 100%;
-    } 
+    }
 }
 
 .form__button:hover {

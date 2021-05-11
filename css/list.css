@@ -1,3 +1,9 @@
+.list__header {
+    background-color: #fff;
+    padding: 20px 10px;
+    margin-bottom: 3px;
+}
+
 .list {
     list-style: none;
 }
@@ -22,7 +28,6 @@
         justify-content: center;
     }
 }
-
 .list__span {
     font-size: 22px;
     overflow-wrap: break-word;
