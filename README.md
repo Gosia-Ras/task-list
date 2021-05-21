@@ -8,7 +8,7 @@ Project done as a part of front-end development course at YouCode.
 ## Demo: 
 https://gosia-ras.github.io/task-list/ <- check out here how it works
 
-![Screenshot of the page](https://raw.githubusercontent.com/Gosia-Ras/task-list/main/images/task-screenshot.png)
+![Screenshot of the page](https://raw.githubusercontent.com/Gosia-Ras/task-list/main/images/list-screenshot.png)
 
 ## Tools: 
 
