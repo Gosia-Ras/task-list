@@ -40,6 +40,7 @@
     flex-grow: 1;
     padding: 10px;
     border: none;
+    transition: 1s; 
 }
 
 @media (max-width: 767px) {
@@ -51,5 +52,6 @@
 }
 
 .form__button:hover {
-    background-color: rgb(47, 168, 156);
+    background-color: rgb(2, 155, 155);
+    transform: scale(1.1);
 }
