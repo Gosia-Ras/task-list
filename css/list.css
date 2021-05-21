@@ -29,3 +29,7 @@
 .list__span--done {
     text-decoration: line-through;
 }
+
+.list__section {
+    display: grid;
+}
