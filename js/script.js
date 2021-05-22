@@ -22,7 +22,7 @@
     const toggleTaskDone = (taskIndex) => {
         tasks = [
             ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex], done: !tasks[taskIndex].done }, //dlaczego to działa? jak to przeczytać?
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
             ...tasks.slice(taskIndex + 1),
         ]
         render();
@@ -66,9 +66,7 @@
                 </li>
             `;
         };
-
         document.querySelector(".js-tasks").innerHTML = htmlTasksString;
-
     };
 
     const toggleAllTasksDone = tasksArray => {
@@ -101,9 +99,7 @@
             </button>
             `
         };
-
         document.querySelector(".list__section").innerHTML = htmlButtons;
-        // add buttons in HTML when there is at least one task on the list
     };
 
     const render = () => {
