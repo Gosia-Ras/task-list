@@ -53,10 +53,10 @@
 
         for (const task of tasks) {
             htmlTasksString += `
-                <li class="list__item">
-                     <button class="button button--done js-doneButton">
+            <li class="list__item${task.done & hideAllDone ? " list__item--hidden" : ""}">
+                    <button class="button button--done js-doneButton">
                         ${task.done ? "✔" : " "}
-                     </button>
+                    </button>
                      <span class="list__span ${task.done ? "list__span--done" : ""}">
                         ${task.content}
                     </span>
@@ -86,6 +86,20 @@
         };
     };
 
+    const toggleAllTasksHidden = () => {
+        hideAllDone = !hideAllDone;
+        render();
+    };
+
+    const bindHideAllTasks = () => {
+        const buttonHideAllDone = document.querySelector(".js-buttonHideAllDone");
+        if (buttonHideAllDone) {
+            buttonHideAllDone.addEventListener("click", () => {
+                toggleAllTasksHidden();
+            });
+        };
+    };
+
     const renderButtons = () => {
         let htmlButtons = "";
 
@@ -95,7 +109,7 @@
              Mark all done
             </button>
             <button class="js-buttonHideAllDone">
-                Hide all done
+            Hide all done
             </button>
             `
         };
@@ -108,6 +122,7 @@
         bindRemoveEvents();
         bindDoneEvents();
         bindAllTasksDone();
+        bindHideAllTasks();
     };
 
     const resetInput = (newTask) => {
