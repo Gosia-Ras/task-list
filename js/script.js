@@ -1,7 +1,7 @@
 {
     let tasks = [];
 
-    let hideDoneButton = false;
+    let hideAllDone = false;
 
     const addNewTask = (newTask) => {
         tasks = [
@@ -20,11 +20,11 @@
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks = [ 
+        tasks = [
             ...tasks.slice(0, taskIndex),
             { ...tasks[taskIndex], done: !tasks[taskIndex].done }, //dlaczego to działa? jak to przeczytać?
             ...tasks.slice(taskIndex + 1),
-    ]
+        ]
         render();
     };
 
@@ -39,14 +39,14 @@
     };
 
     const bindRemoveEvents = () => {
-            const removeButtons = document.querySelectorAll(".js-remove");
+        const removeButtons = document.querySelectorAll(".js-remove");
 
-            removeButtons.forEach((removeButtons, index) => {
-                removeButtons.addEventListener("click", () => {
-                    removeTask(index);
-                });
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
             });
-        };
+        });
+    };
 
     const renderTasks = () => {
         let htmlTasksString = "";
@@ -68,6 +68,24 @@
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlTasksString;
+
+    };
+
+    const toggleAllTasksDone = tasksArray => {
+        tasks = tasksArray.map(task => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    };
+
+    const bindAllTasksDone = () => {
+        const buttonAllDone = document.querySelector(".js-buttonAllDone");
+        if (buttonAllDone) {
+            buttonAllDone.addEventListener("click", () => {
+                toggleAllTasksDone(tasks);
+            });
+        };
     };
 
     const renderButtons = () => {
@@ -75,13 +93,17 @@
 
         if (tasks.length > 0) {
             htmlButtons += `
-            <button class="js-buttonAllDone">Mark all done</button>
-            <button class="js-buttonHideAllDone">Hide all done</button>
+            <button class="js-buttonAllDone">
+             Mark all done
+            </button>
+            <button class="js-buttonHideAllDone">
+                Hide all done
+            </button>
             `
         };
-        
+
         document.querySelector(".list__section").innerHTML = htmlButtons;
-            // add buttons in HTML when there is at least one task on the list
+        // add buttons in HTML when there is at least one task on the list
     };
 
     const render = () => {
@@ -89,6 +111,7 @@
         renderButtons();
         bindRemoveEvents();
         bindDoneEvents();
+        bindAllTasksDone();
     };
 
     const resetInput = (newTask) => {
