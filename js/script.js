@@ -1,6 +1,8 @@
 {
     let tasks = [];
 
+    let hideDoneButton = false;
+
     const addNewTask = (newTask) => {
         tasks = [
             ...tasks,
@@ -18,7 +20,11 @@
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks = [ 
+            ...tasks.slice(0, taskIndex),
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done }, //dlaczego to działa? jak to przeczytać?
+            ...tasks.slice(taskIndex + 1),
+    ]
         render();
     };
 
@@ -43,31 +49,44 @@
         };
 
     const renderTasks = () => {
-        let htmlString = "";
+        let htmlTasksString = "";
 
         for (const task of tasks) {
-            htmlString += `
+            htmlTasksString += `
                 <li class="list__item">
                      <button class="button button--done js-doneButton">
-                     ${task.done ? "✔" : " "}
+                        ${task.done ? "✔" : " "}
                      </button>
                      <span class="list__span ${task.done ? "list__span--done" : ""}">
-                         ${task.content}
-                         </span>
-                    <button class="button button--remove js-remove">🗑</button>    
+                        ${task.content}
+                    </span>
+                    <button class="button button--remove js-remove">
+                        🗑
+                    </button>    
                 </li>
             `;
         };
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = htmlTasksString;
     };
 
     const renderButtons = () => {
-        // add buttons in HTML when there is at least one task on the list
-    }
+        let htmlButtons = "";
+
+        if (tasks.length > 0) {
+            htmlButtons += `
+            <button class="js-buttonAllDone">Mark all done</button>
+            <button class="js-buttonHideAllDone">Hide all done</button>
+            `
+        };
+        
+        document.querySelector(".list__section").innerHTML = htmlButtons;
+            // add buttons in HTML when there is at least one task on the list
+    };
 
     const render = () => {
         renderTasks();
+        renderButtons();
         bindRemoveEvents();
         bindDoneEvents();
     };
