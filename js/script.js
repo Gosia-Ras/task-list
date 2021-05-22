@@ -106,10 +106,10 @@
         if (tasks.length > 0) {
             htmlButtons += `
             <button class="js-buttonAllDone">
-             Mark all done
+                Mark all done
             </button>
             <button class="js-buttonHideAllDone">
-            Hide all done
+                Hide all done
             </button>
             `
         };
