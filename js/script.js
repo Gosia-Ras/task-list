@@ -33,7 +33,7 @@
         render();
     };
 
-    const bindDoneEvents = () => {
+    const bindDoneEvent = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-doneButton");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -43,7 +43,7 @@
         });
     };
 
-    const bindRemoveEvents = () => {
+    const bindRemoveEvent = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButtons, index) => {
@@ -76,19 +76,20 @@
 
     const toggleAllTasksDone = () => {
         tasks = tasks.map(task => ({
-                ...task,
-                done: true,
-            }));
+            ...task,
+            done: true,
+        }));
         render();
     };
 
     const bindAllTasksDone = () => {
         const buttonAllDone = document.querySelector(".js-buttonAllDone");
-        if (buttonAllDone) {
-            buttonAllDone.addEventListener("click", () => {
-                toggleAllTasksDone(tasks);
-            });
+        if (!buttonAllDone) {
+            return;
         };
+        buttonAllDone.addEventListener("click", () => {
+            toggleAllTasksDone(tasks);
+        });
     };
 
     const toggleAllTasksHidden = () => {
@@ -98,11 +99,12 @@
 
     const bindHideAllTasks = () => {
         const buttonHideAllDone = document.querySelector(".js-buttonHideAllDone");
-        if (buttonHideAllDone) {
-            buttonHideAllDone.addEventListener("click", () => {
-                toggleAllTasksHidden();
-            });
+        if (!buttonHideAllDone) {
+            return;
         };
+        buttonHideAllDone.addEventListener("click", () => {
+            toggleAllTasksHidden();
+        });
     };
 
     const renderButtons = () => {
@@ -124,8 +126,8 @@
     const render = () => {
         renderTasks();
         renderButtons();
-        bindRemoveEvents();
-        bindDoneEvents();
+        bindRemoveEvent();
+        bindDoneEvent();
         bindAllTasksDone();
         bindHideAllTasks();
     };
