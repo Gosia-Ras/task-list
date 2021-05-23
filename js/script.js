@@ -7,7 +7,7 @@
         tasks = [
             ...tasks,
             { content: newTask },
-        ]
+        ];
         render();
     };
 
@@ -20,9 +20,14 @@
     };
 
     const toggleTaskDone = (taskIndex) => {
+        const task = tasks[taskIndex];
+
         tasks = [
             ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+            {
+                ...task,
+                done: !task.done
+            },
             ...tasks.slice(taskIndex + 1),
         ]
         render();
@@ -53,11 +58,11 @@
 
         for (const task of tasks) {
             htmlTasksString += `
-            <li class="list__item${task.done & hideAllDone ? " list__item--hidden" : ""}">
+                <li class="list__item${task.done & hideAllDone ? " list__item--hidden" : ""}">
                     <button class="button button--done js-doneButton">
                         ${task.done ? "✔" : " "}
                     </button>
-                     <span class="list__span ${task.done ? "list__span--done" : ""}">
+                     <span class="list__span${task.done ? " list__span--done" : ""}">
                         ${task.content}
                     </span>
                     <button class="button button--remove js-remove">
@@ -69,11 +74,11 @@
         document.querySelector(".js-tasks").innerHTML = htmlTasksString;
     };
 
-    const toggleAllTasksDone = tasksArray => {
-        tasks = tasksArray.map(task => ({
-            ...task,
-            done: true,
-        }));
+    const toggleAllTasksDone = () => {
+        tasks = tasks.map(task => ({
+                ...task,
+                done: true,
+            }));
         render();
     };
 
@@ -105,12 +110,12 @@
 
         if (tasks.length > 0) {
             htmlButtons += `
-            <button class="js-buttonAllDone">
-                Mark all done
-            </button>
-            <button class="js-buttonHideAllDone">
-                Hide all done
-            </button>
+                <button class="js-buttonAllDone">
+                    Mark all done
+                </button>
+                <button class="js-buttonHideAllDone">
+                    Hide all done
+                </button>
             `
         };
         document.querySelector(".list__section").innerHTML = htmlButtons;
