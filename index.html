@@ -15,32 +15,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/body.css" rel="stylesheet">
-    <link href="css/button.css" rel="stylesheet">
-    <link href="css/list.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/list.css" rel=" stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
 
 <body class="body">
     <header>
-        <h1>To-do List</h1>
+        <h1 class="body__header">To-Do List</h1>
     </header>
-    <section>
-        <form class="form js-form">
-            <h2 class="form__header">Add a new task to the list</h2>
-            <div class="form__container">
-                <input class="form__input js-newTask" placeholder="Type here">
-                <button class="form__button">Click to add</button>
+    <main class="main">
+        <section class="section">
+            <div class="section__layout">
+                <h2 class="section__header">Add a new task to the list</h2>
             </div>
-        </form>
-    </section>
-    <section>
-        <div class="list__section">
-            <h2 class="list__header">List</h2>
-            <div class="js-buttons"></div>
-        </div>
-        <ul class="list js-tasks"></ul>
-    </section>
+            <div class="section__body">
+                <form class="form js-form">
+                    <input class="form__text js-newTask" type="text" placeholder="What do you have to do?">
+                    <button class="form__button js-button">Click to add</button>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section__layout">
+                <h2 class="section__header">List</h2>
+                <div class="section__buttonsContainer js-sectionButtons"></div>
+            </div>
+            <div class="section__body">
+                <ul class="list js-tasks "></ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
