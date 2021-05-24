@@ -1,0 +1,51 @@
+.section {
+    display: grid;
+    grid-template-rows: auto minmax(50px, 1fr);
+    grid-gap: 5px;
+}
+
+.section__layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 15px;
+    background-color: white;
+}
+
+@media (max-width: 767px) {
+    .section__layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__header {
+    background-color: white;
+}
+
+.section__body {
+    padding: 20px;
+    background-color: white;
+}
+
+.section__buttonsContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
+
+@media (max-width: 767px) {
+    .section__buttonsContainer {
+        grid-template-columns: 1fr;
+    }
+} 
+
+.section__button  {
+    border: none;
+    background-color: white;
+    color: hsl(180, 100%, 25%);
+    transition: color 0.5s linear;
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 30%);
+}
