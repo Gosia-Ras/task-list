@@ -49,3 +49,6 @@
 .section__button:hover {
     color: hsl(180, 100%, 30%);
 }
+.section__button:disabled {
+    color: grey;
+}
