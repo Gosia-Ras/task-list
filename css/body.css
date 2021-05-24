@@ -1,6 +1,11 @@
 .body {
-    background-color: #eee;
+    max-width: 800px;
     margin: 0 auto;
-    width: 800px;
-    font-family: 'Montserrat', sans-serif;;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+}
+
+.body__header {
+    margin: 20px auto;
 }
