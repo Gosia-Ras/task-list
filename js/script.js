@@ -58,14 +58,14 @@
 
         for (const task of tasks) {
             htmlTasksString += `
-                <li class="list__item${task.done & hideAllDone ? " list__item--hidden" : ""}">
-                    <button class="button button--done js-doneButton">
+                <li class="list__item${task.done & hideAllDone ? " list__item--hide" : ""}">
+                    <button class="list__button list__button--done js-doneButton">
                         ${task.done ? "✔" : " "}
                     </button>
                      <span class="list__span${task.done ? " list__span--done" : ""}">
                         ${task.content}
                     </span>
-                    <button class="button button--remove js-remove">
+                    <button class="list__button list__button--remove js-remove">
                         🗑
                     </button>    
                 </li>
@@ -112,15 +112,15 @@
 
         if (tasks.length > 0) {
             htmlButtons += `
-                <button class="js-buttonAllDone">
+                <button class="section__button js-buttonAllDone">
                     Mark all done
                 </button>
-                <button class="js-buttonHideAllDone">
+                <button class="section__button js-buttonHideAllDone">
                     Hide all done
                 </button>
             `
         };
-        document.querySelector(".list__section").innerHTML = htmlButtons;
+        document.querySelector(".js-sectionButtons").innerHTML = htmlButtons;
     };
 
     const render = () => {
