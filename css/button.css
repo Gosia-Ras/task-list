@@ -1,6 +1,7 @@
 .button {
     transition: background 1s;
     border: none;
+    cursor: pointer;
 }
 .button--add {
     background-color: teal;
@@ -31,6 +32,7 @@
 
 .button--section:disabled {
     color: grey;
+    cursor: auto;
 }
 
 .button__list {
