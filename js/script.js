@@ -87,9 +87,7 @@
         if (!buttonAllDone) {
             return;
         };
-        buttonAllDone.addEventListener("click", () => {
-            toggleAllTasksDone(tasks);
-        });
+        buttonAllDone.addEventListener("click", toggleAllTasksDone);
     };
 
     const toggleAllTasksHidden = () => {
@@ -102,15 +100,13 @@
         if (!buttonHideAllDone) {
             return;
         };
-        buttonHideAllDone.addEventListener("click", () => {
-            toggleAllTasksHidden();
-        });
+        buttonHideAllDone.addEventListener("click", toggleAllTasksHidden)
     };
 
     const renderButtons = () => {
         let htmlButtons = "";
 
-        if (tasks.length > 0) {
+        if (tasks.length) {
             htmlButtons += `
                 <button class="button button__section js-buttonAllDone"
                     ${tasks.every(({ done }) => done) ? "disabled" : ""}
