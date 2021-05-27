@@ -113,11 +113,12 @@
         if (tasks.length > 0) {
             htmlButtons += `
                 <button class="section__button js-buttonAllDone"
-                     ${tasks.every(task => task.done) ? "disabled" : ""}>
+                    ${tasks.every(({ done }) => done) ? "disabled" : ""}
+                >
                     Mark all done
                 </button>
                 <button class="section__button js-buttonHideAllDone">
-                    Hide all done
+                   ${hideAllDone ? "Show" : "Hide"} finished tasks 
                 </button>
             `
         };
