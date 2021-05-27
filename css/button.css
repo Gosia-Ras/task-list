@@ -32,7 +32,7 @@
 
 .button--section:disabled {
     color: grey;
-    cursor: auto;
+    cursor: not-allowed;
 }
 
 .button__list {
