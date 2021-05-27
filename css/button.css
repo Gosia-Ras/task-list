@@ -19,16 +19,17 @@
     outline: 2px solid black;
 }
 
-.button__section  {
+.button--section  {
     background-color: transparent;
     color: hsl(180, 100%, 25%);
+    transition: color 1s;
 }
 
-.button__section:hover {
+.button--section:hover {
     color: hsl(180, 100%, 30%);
 }
 
-.button__section:disabled {
+.button--section:disabled {
     color: grey;
 }
 
