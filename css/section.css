@@ -38,17 +38,3 @@
         grid-template-columns: 1fr;
     }
 } 
-
-.section__button  {
-    border: none;
-    background-color: white;
-    color: hsl(180, 100%, 25%);
-    transition: color 0.5s linear;
-}
-
-.section__button:hover {
-    color: hsl(180, 100%, 30%);
-}
-.section__button:disabled {
-    color: grey;
-}
