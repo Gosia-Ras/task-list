@@ -113,8 +113,10 @@
                 >
                     Mark all done
                 </button>
-                <button class="button button--section js-buttonHideAllDone">
-                   ${hideAllDone ? "Show" : "Hide"} finished tasks 
+                <button class="button button--section js-buttonHideAllDone"
+                ${tasks.every( ({ done }) => !done) ? "disabled" : "" } >
+                   ${hideAllDone ? "Show" : "Hide"} 
+                   finished tasks 
                 </button>
             `
         };
