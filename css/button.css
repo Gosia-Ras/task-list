@@ -22,12 +22,12 @@
 .button__section  {
     background-color: transparent;
     color: hsl(180, 100%, 25%);
-    transition: background 1s;
 }
 
 .button__section:hover {
     color: hsl(180, 100%, 30%);
 }
+
 .button__section:disabled {
     color: grey;
 }
@@ -37,7 +37,6 @@
     height: 30px;
     background-color: hsl(120, 100%, 25%);
     color: white;
-    transition: background 0.5s linear;
 }
 
 .button__list:hover {
